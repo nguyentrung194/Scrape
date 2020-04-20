@@ -1,0 +1,26 @@
+{
+    "name": "hello-next",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next -p 8000",
+        "build": "next build",
+        "start": "next start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "cheerio": "^1.0.0-rc.3",
+        "next": "^9.3.4",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@types/cheerio": "^0.22.17",
+        "@types/react": "^16.9.34",
+        "typescript": "^3.8.3"
+    }
+}
