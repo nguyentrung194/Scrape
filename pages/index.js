@@ -4,10 +4,11 @@ import axios from 'axios';
 import React, {useState} from 'react';
 import Post from './components/Post'
 
+
 const layoutStyle = {
-  marginTop: 10,
-  marginBottom: 20,
-  padding: 20,
+  marginTop: '10',
+  marginBottom: '20',
+  padding: '20',
   border: '1px solid #DDD'
 };
 const postStyle={
@@ -22,35 +23,34 @@ const postStyle={
  */
 
  const myConfig = {
-   webSite: {
-     muctim: {
-        url: 'https://vn.indeed.com/jobs?q=&l=Vi%E1%BB%87t+Nam&start=',
-        parent: '#resultsCol',
-        child: '.jobsearch-SerpJobCard',
-        title: 'a[data-tn-element="jobTitle"]',
-        company: '.company',
-        address: '.accessible-contrast-color-location',
-        summary: '.summary'
-     },
-    },
- }
+  webSite: {
+    url: 'https://vn.indeed.com/jobs?q=&l=Vi%E1%BB%87t+Nam&start=',
+    parent: '#resultsCol',
+    child: '.jobsearch-SerpJobCard',
+    title: 'a[data-tn-element="jobTitle"]',
+    company: '.company',
+    address: '.accessible-contrast-color-location',
+    summary: '.summary'
+  },
+}
 
 
 
 // client side
-export default ({titleResult, companyResult, addressResult, summaryResult}) => {
-  console.log({titleResult, companyResult, addressResult, summaryResult})
-  let key=0;
+function Page({titleResult, addressResult, companyResult, summaryResult}) {
+  console.log({titleResult, addressResult, companyResult, summaryResult});
   return (
-    <Layout content={
-      <div style={layoutStyle}>
-        <h2>Result</h2>
-        
-      </div>
-    }/>  
-  )
+    <div>
+        <Layout content={
+          <div>
+            <Post titleResult={titleResult} addressResult={addressResult} companyResult={companyResult} summaryResult={summaryResult} />
+          </div>
+        } />
+    </div>
+  );
 }
 
+export default Page
 // server side
 export async function getServerSideProps(){
   let couter = 10
@@ -59,21 +59,21 @@ export async function getServerSideProps(){
   let address = [];
   let summary = [];
   let summaryTemp = [];
-  while(couter<100){
-    let URL = myConfig.webSite.muctim.url+{couter}
+  while(couter<20){
+    let URL = myConfig.webSite.url+{couter}
     let resFromUrl = await axios.get(URL)
     let $ = cheerio.load(resFromUrl.data)
-    
-    $(myConfig.webSite.muctim.parent)
-    .find(myConfig.webSite.muctim.child)
+    // đống code để lấy dữ liệu
+    $(myConfig.webSite.parent)
+    .find(myConfig.webSite.child)
     .each((i, el)=>{
-      $(el).find(myConfig.webSite.muctim.title)
+      $(el).find(myConfig.webSite.title)
       .each((i, el)=>title.push(($(el).text())))
-      $(el).find(myConfig.webSite.muctim.company)
+      $(el).find(myConfig.webSite.company)
       .each((i, el)=>company.push($(el).text()))
-      $(el).find(myConfig.webSite.muctim.address)
+      $(el).find(myConfig.webSite.address)
       .each((i, el)=>address.push($(el).text()))
-      $(el).find(myConfig.webSite.muctim.summary)
+      $(el).find(myConfig.webSite.summary)
       .each((i, el)=>{
         $(el).find('li').each((i, el)=>{
           summaryTemp.push($(el).text())
@@ -84,17 +84,19 @@ export async function getServerSideProps(){
     })
     couter+=10
   }
+  // Duyệt qua các mảng
   const titleResult = title.filter(n => n != undefined )
   const addressResult = address.filter(n => n != undefined )
   const companyResult = company.filter(n => n != undefined )
   const summaryResult = summary.filter(n => n != undefined )
+  
 
   return {
     props: {
       titleResult: titleResult,
-      companyResult: companyResult,
       addressResult: addressResult,
-      summaryResult: summaryResult,
+      companyResult: companyResult,
+      summaryResult: summaryResult
     }
   }  
 

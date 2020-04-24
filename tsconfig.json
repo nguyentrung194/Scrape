@@ -24,6 +24,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "pages/about.js", "pages/components/Header.js", "pages/components/MyLayout.js"
   ]
 }
