@@ -1,11 +1,10 @@
-import react, {useState, components} from 'react'
+import react, { useState, components } from "react";
 
-const Post = props => 
-(
-    <div>
-        {props}
-    </div>
+const Post = (props) => (
+  <div>
+    <p>{props.titleResult}</p>
+    <p>{props.addressResult}</p>
+  </div>
 );
 
-
-export default Post
+export default Post;

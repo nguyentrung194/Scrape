@@ -542,10 +542,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Chello-next%5Cpages%5Cindex.js!./":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Chello-next%5Cpages%5Cindex.js ***!
-  \***************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Cproject%5Chello-next%5Cpages%5Cindex.js!./":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Cproject%5Chello-next%5Cpages%5Cindex.js ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4279,10 +4279,10 @@ try {
 
 /***/ }),
 
-/***/ "./pages/components/Header.tsx":
-/*!*************************************!*\
-  !*** ./pages/components/Header.tsx ***!
-  \*************************************/
+/***/ "./pages/components/Header.js":
+/*!************************************!*\
+  !*** ./pages/components/Header.js ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4293,7 +4293,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\Admin\\Desktop\\hello-next\\pages\\components\\Header.tsx";
+    _jsxFileName = "C:\\Users\\Admin\\Desktop\\project\\hello-next\\pages\\components\\Header.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4349,10 +4349,10 @@ var Header = function Header() {
 
 /***/ }),
 
-/***/ "./pages/components/MyLayout.tsx":
-/*!***************************************!*\
-  !*** ./pages/components/MyLayout.tsx ***!
-  \***************************************/
+/***/ "./pages/components/MyLayout.js":
+/*!**************************************!*\
+  !*** ./pages/components/MyLayout.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4360,9 +4360,9 @@ var Header = function Header() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./pages/components/Header.tsx");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./pages/components/Header.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\Admin\\Desktop\\hello-next\\pages\\components\\MyLayout.tsx";
+    _jsxFileName = "C:\\Users\\Admin\\Desktop\\project\\hello-next\\pages\\components\\MyLayout.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4371,7 +4371,7 @@ var layoutStyle = {
   marginTop: 10,
   marginBottom: 20,
   padding: 20,
-  border: '1px solid #DDD'
+  border: "1px solid #DDD"
 };
 
 var Layout = function Layout(props) {
@@ -4390,7 +4390,7 @@ var Layout = function Layout(props) {
       lineNumber: 12,
       columnNumber: 5
     }
-  }), props.content);
+  }), props.children);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -4409,7 +4409,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\Admin\\Desktop\\hello-next\\pages\\components\\Post.js";
+    _jsxFileName = "C:\\Users\\Admin\\Desktop\\project\\hello-next\\pages\\components\\Post.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4420,27 +4420,24 @@ var Post = function Post(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 3
+    }
+  }, __jsx("p", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 5,
       columnNumber: 5
     }
-  }, __jsx("h3", {
+  }, props.titleResult), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6,
-      columnNumber: 9
+      columnNumber: 5
     }
-  }, props.title), __jsx("img", {
-    src: props.img,
-    key: props.key,
-    style: props.style,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 9
-    }
-  }));
+  }, props.addressResult));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Post);
@@ -4457,83 +4454,132 @@ var Post = function Post(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__N_SSP", function() { return __N_SSP; });
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/MyLayout */ "./pages/components/MyLayout.tsx");
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/MyLayout */ "./pages/components/MyLayout.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Post */ "./pages/components/Post.js");
-var _this = undefined,
-    _jsxFileName = "C:\\Users\\Admin\\Desktop\\hello-next\\pages\\index.js";
-
+var _jsxFileName = "C:\\Users\\Admin\\Desktop\\project\\hello-next\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 var layoutStyle = {
-  marginTop: 10,
-  marginBottom: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+  marginTop: "10",
+  marginBottom: "20",
+  padding: "20",
+  border: "1px solid #DDD"
 };
 var postStyle = {
-  border: '1px solid #ddd',
-  borderRadius: '4px',
-  padding: '5px',
-  width: '200px'
+  border: "1px solid #ddd",
+  borderRadius: "4px",
+  padding: "5px",
+  width: "200px"
 };
 /****
  * Bat dau config
  */
 
 // client side
-var __N_SSP = true;
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+function Page(_ref) {
+  var _this = this;
+
   var titleResult = _ref.titleResult,
-      companyResult = _ref.companyResult,
       addressResult = _ref.addressResult,
+      companyResult = _ref.companyResult,
       summaryResult = _ref.summaryResult;
-  console.log({
-    titleResult: titleResult,
-    companyResult: companyResult,
-    addressResult: addressResult,
-    summaryResult: summaryResult
+  var data = titleResult.map(function (el, idx) {
+    return {
+      title: el,
+      address: addressResult[idx],
+      company: companyResult[idx],
+      summary: summaryResult[idx]
+    };
   });
-  var key = 0;
-  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_0__["default"], {
-    content: __jsx("div", {
-      style: layoutStyle,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46,
-        columnNumber: 7
-      }
-    }, __jsx("h2", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47,
-        columnNumber: 9
-      }
-    }, "Result")),
-    __self: _this,
+  return __jsx("div", {
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 47,
       columnNumber: 5
     }
-  });
-}); // server side
+  }, __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 7
+    }
+  }, data.map(function (el, idx) {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
+      style: postStyle,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52,
+        columnNumber: 15
+      }
+    }, __jsx("h1", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53,
+        columnNumber: 17
+      }
+    }, "Post", " " + (idx + 1)), __jsx("p", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54,
+        columnNumber: 17
+      }
+    }, el.title), __jsx("p", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55,
+        columnNumber: 17
+      }
+    }, el.address), __jsx("p", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56,
+        columnNumber: 17
+      }
+    }, el.company), __jsx("p", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57,
+        columnNumber: 17
+      }
+    }, el.summary)), __jsx("div", {
+      style: {
+        height: "30px"
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59,
+        columnNumber: 15
+      }
+    }));
+  })));
+}
+
+var __N_SSP = true;
+/* harmony default export */ __webpack_exports__["default"] = (Page); // server side
 
 /***/ }),
 
 /***/ 1:
-/*!*******************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Chello-next%5Cpages%5Cindex.js ***!
-  \*******************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Cproject%5Chello-next%5Cpages%5Cindex.js ***!
+  \*****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Chello-next%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Chello-next%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Cproject%5Chello-next%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5CDesktop%5Cproject%5Chello-next%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
